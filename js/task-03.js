@@ -12,3 +12,25 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+// console.log(images.flatMap())
+
+const imagesList = document.querySelector('ul.gallery')
+
+const createImagesListItem = images
+.map( (image) => `<li><img url="${image.url}" alt="${image.alt}"></li>`)
+.join("");
+// console.log(createImagesListItem)
+imagesList.insertAdjacentHTML('afterbegin',createImagesListItem)
+
+/*
+Napisz skrypt do tworzenia galerii obrazów według tablicy danych. W HTML znajduje się lista ul.gallery.
+
+<ul class="gallery"></ul>
+
+Użyj tablicy obiektów images w celu utworzenia elementów <img> umieszczonych w <li>. Aby utworzyć znacznik użyj łańcuchów szablonowych i metody insertAdjacentHTML().
+
+Wszystkie elementy galerii powinny być dodawane do DOM podczas jednej operacji.
+Ulepsz galerię używając flexboxów lub gridów poprzez klasy CSS.
+*/
