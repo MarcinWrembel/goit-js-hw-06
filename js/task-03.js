@@ -11,7 +11,7 @@ const images = [
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
   },
-];
+  ];
 
 
 // console.log(images.flatMap())
@@ -19,9 +19,9 @@ const images = [
 const imagesList = document.querySelector('ul.gallery')
 
 const createImagesListItem = images
-.map( (image) => `<li><img url="${image.url}" alt="${image.alt}"></li>`)
+.map( (image) => `<li class="gallery__item"><img class="gallery__image" src="${image.url}" alt="${image.alt}"></li>`)
 .join("");
-// console.log(createImagesListItem)
+console.log(createImagesListItem)
 imagesList.insertAdjacentHTML('afterbegin',createImagesListItem)
 
 /*
