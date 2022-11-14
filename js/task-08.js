@@ -18,6 +18,9 @@ function handleSubmit(dataInput) {
   const objFromFormData = Object.fromEntries(setOfData);
   console.log(objFromFormData);
 
+  // const result = { email: email.value, password: password.value };
+  // console.log(result);
+
   dataInput.currentTarget.reset();
 }
 /*

@@ -14,7 +14,6 @@ const images = [
   ];
 
 
-// console.log(images.flatMap())
 
 const imagesList = document.querySelector('ul.gallery')
 
