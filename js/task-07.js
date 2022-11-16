@@ -1,10 +1,14 @@
-const inputRange = document.querySelector('input#font-size-control');
-const textToChange = document.querySelector('span#text')
+"use strict";
+const inputRange = document.querySelector("input#font-size-control");
+const textToChange = document.querySelector("span#text");
 
-inputRange.addEventListener('input', (currentValue) =>
-{const inputValue= currentValue.currentTarget.value;
-    textToChange.style.fontSize = inputValue + 'px'
-})
+inputRange.value = inputRange.min;
+// console.log("min: "+ inputRange.min + " max:" + inputRange.max);
+
+inputRange.addEventListener("input", (currentValue) => {
+  const inputValue = currentValue.currentTarget.value;
+  textToChange.style.fontSize = inputValue + "px";
+});
 
 // console.log(textToChange)
 // console.log(document.getElementById('text').textContent)

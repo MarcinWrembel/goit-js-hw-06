@@ -1,10 +1,18 @@
 const textInput = document.querySelector("#name-input");
 const textOutput = document.querySelector("#name-output");
 
-textInput.addEventListener(
-  "input",
-  (update) => (textOutput.textContent = update.currentTarget.value)
+textInput.addEventListener("input", (update) => 
+  !!update.currentTarget.value
+    ? (textOutput.textContent = update.currentTarget.value)
+    : (textOutput.textContent = "Anonymous")
 );
+
+
+
+// textInput.addEventListener(
+//   "input",
+//   (update) => (textOutput.textContent = update.currentTarget.value)
+// );
 
 /*
 Zadanie 5
