@@ -23,6 +23,21 @@ const createImagesListItem = images
 console.log(createImagesListItem)
 imagesList.insertAdjacentHTML('afterbegin',createImagesListItem)
 
+/* alternatywa
+const list = document.querySelector('.gallery');
+
+images.map(createHTML);
+
+function createHTML(item) {
+  let listItem =  document.createElement('li');
+  let image = document.createElement('img');
+  image.src = item.url;
+  image.alt = item.alt;
+  listItem.appendChild(image);
+  list.appendChild(listItem);
+}
+*/
+
 /*
 Napisz skrypt do tworzenia galerii obrazów według tablicy danych. W HTML znajduje się lista ul.gallery.
 
